@@ -1,0 +1,119 @@
+/* Welcome Page Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Root Container */
+.welcome-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #0d1117;
+  /* Minimal dark theme */
+  color: #f0f6fc;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Content Box */
+.welcome-content {
+  text-align: center;
+  z-index: 2;
+}
+
+/* Title Animation */
+.welcome-title {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 3px;
+  color: #ffffff;
+  animation: fade-in 1.2s ease-out;
+}
+
+
+/* Description Animation */
+.welcome-description {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin: 1rem 0;
+  color: #8b949e;
+  animation: slide-up 1.2s ease-out 0.4s forwards;
+  /* Add 'forwards' */
+  opacity: 0;
+  /* Ensure it starts with opacity 0 */
+}
+
+/* Button Style */
+.welcome-button {
+  padding: 12px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0d1117;
+  background: #58a6ff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(88, 166, 255, 0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.welcome-button:hover {
+  transform: scale(1.1);
+  background: #1f6feb;
+}
+
+/* Background Animation */
+.background-gradient {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: conic-gradient(from 0deg,
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.05));
+  border-radius: 50%;
+  animation: rotate-bg 6s linear infinite;
+  z-index: 1;
+}
+
+/* Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotate-bg {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
