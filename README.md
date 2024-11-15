@@ -14,4 +14,9 @@ Support enviroment files
 ```
 if you want to add more .env files please config in config/webpack 
 
+## How to use env 
+```Typescript
+    process.env.[VARIABLE_NAME]
+```
+
 
