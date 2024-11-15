@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "target": "es2023", // ตั้งให้รองรับฟีเจอร์ล่าสุดของ ES14
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es2023"
+    ], // รองรับ ES2023 และฟีเจอร์ใหม่ล่าสุดของ JavaScript
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "jsx": "react",
+    "sourceMap": true,
+    "declaration": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "incremental": true,
+    "noFallthroughCasesInSwitch": true,
+    "plugins": [
+      {
+        "name": "typescript-styled-plugin"
+      }
+    ]
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
