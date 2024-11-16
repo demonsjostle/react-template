@@ -1,9 +1,9 @@
 # react-template by @demonsjostle
 
 # Tools
-- Webpack
-- Babel
-- React 
+- Webpack 5.96.xx
+- Babel 7.26.xx
+- React 18.3.xx
 - Typescript
 
 
