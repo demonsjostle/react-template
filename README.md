@@ -36,6 +36,17 @@ src/
     yarn make-structure
 ```
 
+# Supports 
+1. [Styled-components](https://styled-components.com/)\
+if you need to use styled components please use this command!
+```bash
+yarn setup styled-components 
+```
+2. [tailwindcss](https://tailwindcss.com/)\
+automatic script to add tailwindcss!
+```
+yarn setup tailwindcss
+```
 
 # Contact 
 <a href="https://demonsjostle.com" target="_blank" rel="noopener noreferrer">demonsjostle.com</a>
