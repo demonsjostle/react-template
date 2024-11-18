@@ -1,10 +1,10 @@
-# react-template by @demonsjostle
+# react-template
 
 # Tools
 - Webpack 5.96.xx
 - Babel 7.26.xx
 - React 18.3.xx
-- Typescript
+- Typescript/Javascript
 
 
 # Enable enviroments
