@@ -10,13 +10,13 @@
 # Enable enviroments
 Support enviroment files
 ```bash
-    touch .env.development .env.production
+touch .env.development .env.production
 ```
 if you want to add more .env files please config in config/webpack 
 
 ## How to use env 
 ```Typescript
-    process.env.[VARIABLE_NAME]
+process.env.[VARIABLE_NAME]
 ```
 
 # Project structure
@@ -31,12 +31,13 @@ src/
  |--services/
 ```
 
-### For prepare project structure use this command !!
+##### For prepare project structure use this command !!
 ```bash
-    yarn make-structure
+yarn make-structure
 ```
 
 # Supports 
+These commands are used to automatically set up and add the necessary components to your project. Have fun!
 1. [Styled-components](https://styled-components.com/)\
 if you need to use styled components please use this command!
 ```bash
