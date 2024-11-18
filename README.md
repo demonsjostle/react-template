@@ -10,8 +10,6 @@
 Use this command to start your project.
 ```bash
 yarn install
-```
-```bash 
 yarn fork
 ```
 
