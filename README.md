@@ -6,6 +6,11 @@
 - React 18.3.xx
 - Typescript/Javascript
 
+# Starter
+Use this command to start your project.
+```bash 
+yarn fork
+```
 
 # Enable enviroments
 Support enviroment files

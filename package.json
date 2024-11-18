@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "NODE_ENV=development webpack serve",
     "build": "NODE_ENV=production webpack",
+    "fork": "node scripts/fork.js",
     "make-structure": "node scripts/make-structure.js",
     "setup": "node scripts/setup.js"
   },
