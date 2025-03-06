@@ -138,44 +138,31 @@ const setupTailwind = async () => {
     // 1. ติดตั้ง dependencies
     console.log("Installing TailwindCSS and related dependencies...");
     await runCommand(
-      "yarn add tailwindcss postcss postcss-loader autoprefixer recast --dev",
+      "yarn add postcss-loader tailwindcss @tailwindcss/postcss postcss recast --dev",
     );
 
     // 2. สร้างไฟล์ tailwind.config.js
     console.log("Initializing TailwindCSS...");
-    await runCommand("npx tailwindcss init");
-
-    // 3. ปรับปรุงไฟล์ tailwind.config.js
-    const tailwindConfigPath = path.resolve("tailwind.config.js");
-    const tailwindConfigContent = `module.exports = {
-  content: ["./src/**/*.{html,js,ts,jsx,tsx}"],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-};`;
-    writeFile(tailwindConfigPath, tailwindConfigContent);
 
     // 4. สร้างไฟล์ postcss.config.js
-    const postcssConfigPath = path.resolve("postcss.config.js");
-    const postcssConfigContent = `module.exports = {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
-  },
-};`;
+    const postcssConfigPath = path.resolve("postcss.config.mjs");
+    const postcssConfigContent = `export default {
+      plugins: {
+        "@tailwindcss/postcss": {},
+      }
+    }`;
     writeFile(postcssConfigPath, postcssConfigContent);
 
     // 5. แก้ไขไฟล์ src/App.css
     const appCssPath = path.resolve("src/App.css");
-    const tailwindDirectives = `@tailwind base;\n@tailwind components;\n@tailwind utilities;\n\n`;
+    const tailwindDirectives = `@import "tailwindcss";\n`;
 
     if (!fs.existsSync(appCssPath)) {
       console.log("src/App.css not found. Creating a new file...");
       writeFile(appCssPath, tailwindDirectives);
     } else {
       const appContent = fs.readFileSync(appCssPath, "utf-8");
-      if (!appContent.includes("@tailwind base;")) {
+      if (!appContent.includes('@import "tailwindcss";')) {
         console.log("Adding Tailwind directives to src/App.css...");
         const updatedAppContent = tailwindDirectives + appContent;
         writeFile(appCssPath, updatedAppContent);

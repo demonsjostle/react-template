@@ -49,7 +49,7 @@ if you need to use styled components please use this command!
 ```bash
 yarn setup styled-components 
 ```
-2. [tailwindcss](https://tailwindcss.com/)\
+2. [tailwindcss](https://tailwindcss.com/)\ --> Version >= 4.0.x
 automatic script to add tailwindcss!
 ```
 yarn setup tailwindcss
